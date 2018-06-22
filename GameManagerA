@@ -49,7 +49,8 @@ public class GameManager : MonoBehaviour
 				
 				int id = Random.Range (0, Spawnpoint1.Length);
 				GameObject point = Spawnpoint1[id];
-				GameObject asteroid = asteroids [Random.Range (0, asteroids.Count)];
+				// this next line could be messing it up   no second asteroid in array   possiby get rid of line
+ 				GameObject asteroid = asteroids [Random.Range (0, asteroids.Count)];
 				GameObject asteroidInstance = Instantiate<GameObject> (asteroid, point.transform.position, Quaternion.identity);
 
 				Vector2 directionVector = new Vector2 (Random.Range (-1.0f, 1.0f), Random.Range (-1.0f, 1.0f));
