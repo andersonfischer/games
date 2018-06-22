@@ -47,7 +47,7 @@ public class GameManager : MonoBehaviour
 			if (activeEnemies.Count < maxActiveEnemies) 
 			{
 				
-				int id = Random.Range (0, Spawnpoint1.Length+1);
+				int id = Random.Range (0, Spawnpoint1.Length);
 				GameObject point = Spawnpoint1[id];
 				GameObject asteroid = asteroids [Random.Range (0, asteroids.Count)];
 				GameObject asteroidInstance = Instantiate<GameObject> (asteroid, point.transform.position, Quaternion.identity);
